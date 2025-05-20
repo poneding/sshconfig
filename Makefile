@@ -1,9 +1,3 @@
-.PHONY: format
-commit:
-	git add .
-	git commit -m "update $(VERSION)"
-	git push
-
 .PHONY:
 format:
 	cargo clippy --fix --allow-dirty
