@@ -1,0 +1,16 @@
+.PHONY: format
+commit:
+	git add .
+	git commit -m "update $(VERSION)"
+	git push
+
+.PHONY:
+format:
+	cargo clippy --fix --allow-dirty
+	cargo fmt
+
+.PHONY:
+release:
+	git tag -a v$(VERSION) -m "release v$(VERSION)"
+	git push origin v$(VERSION)
+	cargo publish

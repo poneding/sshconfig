@@ -1,0 +1,21 @@
+[package]
+name = "sshconfig"
+version = "0.1.0"
+edition = "2024"
+authors = ["Pone Ding<poneding@gmail.com>"]
+description = "A library for parsing SSH config files in Rust."
+documentation = "https://github.com/poneding/sshconfig"
+repository = "https://github.com/poneding/sshconfig"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+keywords = ["sshconfig"]
+
+[lib]
+name = "sshconfig"
+path = "src/lib.rs"
+
+[dependencies]
+shellexpand = "3.1.1"
+
+[dev-dependencies]
+tempfile = "3.3.0"
