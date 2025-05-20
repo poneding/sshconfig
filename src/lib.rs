@@ -46,8 +46,8 @@ pub fn parse_ssh_config<P: AsRef<str>>(path: P) -> io::Result<Vec<HostEntry>> {
         let keyword = parts[0].to_lowercase();
 
         if keyword == "host" {
-            if let Some(config) = current_entry.take() {
-                entries.push(config);
+            if let Some(entry) = current_entry.take() {
+                entries.push(entry);
             }
 
             current_entry = Some(HostEntry::new(parts[1].trim().to_string()));
