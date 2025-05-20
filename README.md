@@ -6,7 +6,7 @@ A Rust library for parsing SSH config files into a structured format in Rust.
 
 Add `sshconfig` crate to your cargo project:
 
-```toml
+```shell
 cargo add sshconfig
 ```
 
