@@ -1,3 +1,6 @@
+VERSION := $(shell cargo read-manifest| jq -r .version)
+export VERSION
+
 .PHONY:
 format:
 	cargo clippy --fix --allow-dirty
